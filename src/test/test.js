@@ -1,4 +1,4 @@
-import Character from "../js/index";
+import Character from "../../index";
 import Bowerman from "../js/Bowerman";
 import Swordsman from "../js/Swordsman";
 import Magician from "../js/Magician";

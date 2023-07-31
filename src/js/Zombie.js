@@ -1,4 +1,4 @@
-import Character from "./index.js";
+import Character from "../index.js";
 
 export default class Zombie extends Character {
   constructor(name, type, health, level, attack, defence) {

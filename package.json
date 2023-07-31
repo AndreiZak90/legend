@@ -2,10 +2,10 @@
   "name": "legend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "../src/js/index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development",
-    "build": "webpack --mode production",
+    "build": "webpack --mode production .",
     "test": "jest --coverage",
     "lint": "eslint ."
   },
