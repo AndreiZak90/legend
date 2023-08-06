@@ -1,7 +1,5 @@
 import Magician from "../js/Magician";
 test("Class check Magician", () => {
-  const name = "name";
-  const typee = "Magician";
   const examination = {
     name: "name",
     type: "Magician",
@@ -11,6 +9,6 @@ test("Class check Magician", () => {
     defence: 40,
   };
 
-  const magician = new Magician(name, typee);
+  const magician = new Magician("name", "Magician");
   expect(magician).toEqual(examination);
 });

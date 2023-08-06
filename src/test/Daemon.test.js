@@ -1,7 +1,5 @@
 import Daemon from "../js/Daemon";
 test("Class check Daemon", () => {
-  const name = "name";
-  const typee = "Daemon";
   const examination = {
     name: "name",
     type: "Daemon",
@@ -11,6 +9,6 @@ test("Class check Daemon", () => {
     defence: 40,
   };
 
-  const deamon = new Daemon(name, typee);
+  const deamon = new Daemon("name", "Daemon");
   expect(deamon).toEqual(examination);
 });

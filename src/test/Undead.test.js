@@ -1,7 +1,5 @@
 import Undead from "../js/Undead";
 test("Class check Undead", () => {
-  const name = "name";
-  const typee = "Undead";
   const examination = {
     name: "name",
     type: "Undead",
@@ -11,6 +9,6 @@ test("Class check Undead", () => {
     defence: 25,
   };
 
-  const undead = new Undead(name, typee);
+  const undead = new Undead("name", "Undead");
   expect(undead).toEqual(examination);
 });

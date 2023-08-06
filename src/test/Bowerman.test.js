@@ -1,7 +1,5 @@
 import Bowerman from "../js/Bowerman";
 test("Class check Bowman", () => {
-  const name = "name";
-  const typee = "Bowman";
   const examination = {
     name: "name",
     type: "Bowman",
@@ -11,6 +9,6 @@ test("Class check Bowman", () => {
     defence: 25,
   };
 
-  const bowerman = new Bowerman(name, typee);
+  const bowerman = new Bowerman("name", "Bowman");
   expect(bowerman).toEqual(examination);
 });

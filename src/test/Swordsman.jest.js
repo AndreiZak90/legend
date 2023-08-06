@@ -1,7 +1,5 @@
 import Swordsman from "../js/Swordsman";
 test("Class check Swordsman", () => {
-  const name = "name";
-  const typee = "Swordsman";
   const examination = {
     name: "name",
     type: "Swordsman",
@@ -11,6 +9,6 @@ test("Class check Swordsman", () => {
     defence: 10,
   };
 
-  const swordman = new Swordsman(name, typee);
+  const swordman = new Swordsman("name", "Swordsman");
   expect(swordman).toEqual(examination);
 });

@@ -1,34 +1,25 @@
 import Zombie from "../js/Zombie";
 
 test("Checking the length of the introduced name", () => {
-  const name = "nameLongBigLong";
-  const typee = "Bowman";
-  expect(() => new Zombie(name, typee)).toThrowError(
+  expect(() => new Zombie("nameLongBigLong", "Bowman")).toThrowError(
     "Имя должно быть строкой от 2 до 10 символов"
   );
 });
 
 test("Checking the introduced type", () => {
-  const name = "name";
-  const typee = "InvalidType";
-
-  expect(() => new Zombie(name, typee)).toThrowError(
+  expect(() => new Zombie("name", "InvalidType")).toThrowError(
     "Не может быть числом или не выбранно указанное значение"
   );
 });
 
 test("Checking the standard of living", () => {
-  const name = "name";
-  const typee = "Bowman";
-  const newClass = new Zombie(name, typee);
+  const newClass = new Zombie("name", "Bowman");
   newClass.health = 0;
   expect(() => newClass.levelUp()).toThrow("Нельзя повысить левел умершего");
 });
 
 test("Checking the standard of living", () => {
-  const name = "name";
-  const typee = "Bowman";
-  const newClass = new Zombie(name, typee);
+  const newClass = new Zombie("name", "Bowman");
   expect(() => newClass.damage(-10)).toThrow(
     "не является символом или значение меньше нуля"
   );
