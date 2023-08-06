@@ -8,14 +8,16 @@ export default class Character {
       this.name = name;
     }
     if (typeof type !== "string" || !types.includes(type)) {
-      throw new Error("Ошибка");
+      throw new Error(
+        "Не может быть числом или не выбранно указанное значение"
+      );
     } else {
       this.type = type;
     }
     this.health = 100;
     this.level = 1;
-    this.attack = 10;
-    this.defence = 10;
+    this.attack = undefined;
+    this.defence = undefined;
   }
 
   levelUp() {

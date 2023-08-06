@@ -12,7 +12,9 @@ test("Checking the introduced type", () => {
   const name = "name";
   const typee = "InvalidType";
 
-  expect(() => new Zombie(name, typee)).toThrowError("Ошибка");
+  expect(() => new Zombie(name, typee)).toThrowError(
+    "Не может быть числом или не выбранно указанное значение"
+  );
 });
 
 test("Checking the standard of living", () => {
