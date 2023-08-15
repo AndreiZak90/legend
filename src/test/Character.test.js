@@ -1,4 +1,5 @@
 import Zombie from "../js/Zombie";
+import Character from "../js/Character";
 
 test("Checking the length of the introduced name", () => {
   expect(() => new Zombie("nameLongBigLong", "Bowman")).toThrowError(
@@ -47,9 +48,17 @@ test("test levelUp умершего", () => {
 });
 
 test("should not reduce health below 0 on damage()", () => {
-  const newClass = new Zombie("name", "Zombie");
-  newClass.health = 10;
-  const damage = 20;
-  newClass.damage(damage);
+  const newClass = new Character("name", "Zombie");
+  newClass.health = 8;
+  newClass.defence = 10;
+  newClass.damage(100);
   expect(newClass.health).toEqual(0);
+});
+
+test("should not reduce health below 0 on damage()", () => {
+  const newClass = new Character("name", "Zombie");
+  newClass.health = 100;
+  newClass.defence = 10;
+  newClass.damage(18);
+  expect(newClass.health).toEqual(83.8);
 });
